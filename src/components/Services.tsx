@@ -1,6 +1,6 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Sofa, BedDouble, Armchair, LayoutGrid, MessageCircle, Check } from "lucide-react";
+import { Sofa, BedDouble, Armchair, LayoutGrid, MessageCircle, Check, X, Star, Zap } from "lucide-react";
 
 const services = [
   {
@@ -33,6 +33,35 @@ const services = [
   },
 ];
 
+const planComparison = {
+  basico: {
+    name: "Lavado Básico",
+    description: "Limpieza profesional estándar",
+    features: [
+      { name: "Limpieza profunda", included: true },
+      { name: "Desmanchado básico", included: true },
+      { name: "Desinfección antibacterial", included: true },
+      { name: "Secado acelerado con turbinas", included: false },
+      { name: "Garantía de olores", included: false },
+      { name: "Entrega lista para usar", included: false },
+    ],
+    note: "Entrega semi-húmeda (24-48h de secado natural)",
+  },
+  full: {
+    name: "Combo Full",
+    description: "Experiencia premium con secado garantizado",
+    features: [
+      { name: "Limpieza profunda", included: true },
+      { name: "Desmanchado profesional", included: true },
+      { name: "Desinfección antibacterial", included: true },
+      { name: "Secado acelerado con turbinas", included: true },
+      { name: "Garantía de olores", included: true },
+      { name: "Entrega lista para usar", included: true },
+    ],
+    note: "Usa tus muebles el mismo día (6-8 horas)",
+  },
+};
+
 const Services = () => {
   const whatsappLink = "https://wa.me/573001234567?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20limpieza";
 
@@ -48,14 +77,12 @@ const Services = () => {
             Limpieza Profesional a Domicilio
           </h2>
           <p className="text-muted-foreground text-lg">
-            Ofrecemos dos planes para adaptarnos a tu presupuesto:{" "}
-            <strong className="text-foreground">Combo Full</strong> (con secado garantizado) y{" "}
-            <strong className="text-foreground">Combo Económico</strong> (entrega semi-húmeda).
+            Lavamos salas, colchones, sillas de comedor y alfombras con tecnología profesional.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {services.map((service, index) => (
             <Card
               key={index}
@@ -93,12 +120,94 @@ const Services = () => {
           ))}
         </div>
 
+        {/* Plan Comparison */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <div className="text-center mb-10">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+              ¿Cuál plan es mejor para ti?
+            </h3>
+            <p className="text-muted-foreground">
+              Sofía, elige el plan que se adapte a tu hogar y estilo de vida
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Lavado Básico */}
+            <Card className="border-border">
+              <CardHeader className="text-center pb-4">
+                <CardTitle className="text-xl font-bold text-card-foreground">
+                  {planComparison.basico.name}
+                </CardTitle>
+                <p className="text-muted-foreground text-sm">
+                  {planComparison.basico.description}
+                </p>
+              </CardHeader>
+              <CardContent className="pt-0">
+                <ul className="space-y-3 mb-6">
+                  {planComparison.basico.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-3">
+                      {feature.included ? (
+                        <Check className="w-5 h-5 text-primary flex-shrink-0" />
+                      ) : (
+                        <X className="w-5 h-5 text-muted-foreground/50 flex-shrink-0" />
+                      )}
+                      <span className={feature.included ? "text-card-foreground" : "text-muted-foreground/60"}>
+                        {feature.name}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="bg-muted/30 rounded-lg p-3 text-center">
+                  <p className="text-sm text-muted-foreground">
+                    {planComparison.basico.note}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Combo Full */}
+            <Card className="border-accent border-2 relative overflow-hidden shadow-xl">
+              <div className="absolute top-0 left-0 right-0 bg-accent text-accent-foreground text-center py-2 font-semibold text-sm flex items-center justify-center gap-2">
+                <Star className="w-4 h-4 fill-current" />
+                RECOMENDADO PARA TI
+                <Star className="w-4 h-4 fill-current" />
+              </div>
+              <CardHeader className="text-center pb-4 pt-12">
+                <CardTitle className="text-xl font-bold text-card-foreground flex items-center justify-center gap-2">
+                  <Zap className="w-5 h-5 text-accent" />
+                  {planComparison.full.name}
+                </CardTitle>
+                <p className="text-muted-foreground text-sm">
+                  {planComparison.full.description}
+                </p>
+              </CardHeader>
+              <CardContent className="pt-0">
+                <ul className="space-y-3 mb-6">
+                  {planComparison.full.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-3">
+                      <Check className="w-5 h-5 text-accent flex-shrink-0" />
+                      <span className="text-card-foreground font-medium">
+                        {feature.name}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="bg-accent/10 border border-accent/20 rounded-lg p-3 text-center">
+                  <p className="text-sm text-foreground font-semibold">
+                    {planComparison.full.note}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
         {/* CTA */}
         <div className="text-center">
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
+            <Button size="lg" className="gap-2 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all">
               <MessageCircle className="w-5 h-5" />
-              Solicitar Cotización Personalizada
+              Cotizar Combo Full Ahora
             </Button>
           </a>
           <p className="text-muted-foreground text-sm mt-4">

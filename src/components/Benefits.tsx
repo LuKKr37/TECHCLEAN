@@ -1,41 +1,41 @@
-import { Clock, ShieldCheck, Users, Heart, Award, Sparkles } from "lucide-react";
+import { Droplets, PawPrint, UserCheck } from "lucide-react";
 
 const benefits = [
   {
-    icon: Clock,
-    title: "Secado Acelerado",
-    description: "Usa tus muebles el mismo día. Nuestro sistema garantiza secado completo en 6-8 horas, no 24 como la competencia.",
-    highlight: "6-8 horas",
+    icon: Droplets,
+    title: "Lavado Profundo y Completamente Seco",
+    description: "Nuestro sistema de turbinas industriales garantiza que tus muebles estén listos para usar en 6-8 horas. Olvídate de esperar días con muebles húmedos que generan mal olor y moho.",
+    highlight: "Secado en 6-8 horas",
+    details: [
+      "Máquinas de inyección-succión profesionales",
+      "Turbinas de secado industrial",
+      "Sin humedad residual",
+      "Sin riesgo de moho u hongos",
+    ],
   },
   {
-    icon: ShieldCheck,
-    title: "Honestidad Radical",
-    description: "Te decimos desde el inicio qué manchas saldrán y cuáles no. Sin falsas promesas, solo resultados reales.",
-    highlight: "Sin sorpresas",
+    icon: PawPrint,
+    title: "Tratamiento Anti-Orina de Mascotas",
+    description: "Sabemos que tus mascotas son parte de la familia. Eliminamos por completo los olores y manchas de orina de perros y gatos con tratamientos enzimáticos especializados.",
+    highlight: "Garantía de olores",
+    details: [
+      "Tratamiento enzimático especializado",
+      "Eliminación de manchas profundas",
+      "Neutralización total de olores",
+      "Productos seguros para mascotas",
+    ],
   },
   {
-    icon: Users,
-    title: "Personal de Confianza",
-    description: "Operaria experta con 5 años de experiencia. La misma persona siempre, sin rotación de desconocidos.",
-    highlight: "5 años",
-  },
-  {
-    icon: Heart,
-    title: "Especialistas en Mascotas",
-    description: "Tratamiento profesional para orina, pelos y olores de perros y gatos. Tu mascota es parte de la familia.",
-    highlight: "Pet-Friendly",
-  },
-  {
-    icon: Award,
-    title: "Equipos Profesionales",
-    description: "Máquinas de inyección-succión profesionales y turbinas de secado industrial. Resultados de lavandería en tu casa.",
-    highlight: "Alta tecnología",
-  },
-  {
-    icon: Sparkles,
-    title: "Desinfección Incluida",
-    description: "Eliminamos ácaros, bacterias y alérgenos. Ideal para personas con problemas respiratorios o alergias.",
-    highlight: "Anti-ácaros",
+    icon: UserCheck,
+    title: "Personal de Confianza Certificado",
+    description: "La misma operaria experta con más de 5 años de experiencia siempre. Sin rotación de desconocidos entrando a tu hogar. Tu tranquilidad y la de tu familia es nuestra prioridad.",
+    highlight: "5 años de experiencia",
+    details: [
+      "Personal verificado y capacitado",
+      "Sin rotación de técnicos",
+      "Honestidad y transparencia total",
+      "Trato profesional garantizado",
+    ],
   },
 ];
 
@@ -49,36 +49,54 @@ const Benefits = () => {
             ¿Por Qué Elegirnos?
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-card-foreground mt-3 mb-4">
-            La Diferencia TechClean
+            Los 3 Pilares de TechClean
           </h2>
           <p className="text-muted-foreground text-lg">
-            No solo lavamos muebles. Restauramos la tranquilidad de tu hogar con tecnología,
-            honestidad y compromiso.
+            Sofía, entendemos lo que realmente importa: muebles secos, hogar libre de olores 
+            y personas de confianza en tu casa.
           </p>
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group p-6 rounded-2xl bg-background border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
+              className="group relative p-8 rounded-2xl bg-background border border-border hover:border-primary/50 hover:shadow-xl transition-all duration-300"
             >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <benefit.icon className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <div className="inline-block bg-primary/10 text-primary text-xs font-semibold px-2 py-1 rounded-full mb-2">
-                    {benefit.highlight}
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {benefit.description}
-                  </p>
-                </div>
+              {/* Icon */}
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                <benefit.icon className="w-8 h-8 text-primary" />
+              </div>
+
+              {/* Highlight Badge */}
+              <div className="inline-block bg-accent/10 text-accent text-sm font-semibold px-3 py-1.5 rounded-full mb-4">
+                {benefit.highlight}
+              </div>
+
+              {/* Title */}
+              <h3 className="text-xl font-bold text-foreground mb-3">
+                {benefit.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                {benefit.description}
+              </p>
+
+              {/* Details List */}
+              <ul className="space-y-2">
+                {benefit.details.map((detail, idx) => (
+                  <li key={idx} className="flex items-center gap-2 text-sm text-foreground/80">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
+                    {detail}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Decorative element */}
+              <div className="absolute top-4 right-4 text-6xl font-bold text-primary/5 group-hover:text-primary/10 transition-colors">
+                {index + 1}
               </div>
             </div>
           ))}
