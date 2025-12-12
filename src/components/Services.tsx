@@ -19,7 +19,7 @@ const services = [
   },
   {
     icon: Armchair,
-    title: "Limpieza de Comedores",
+    title: "Limpieza de Sillas de Comedor",
     description: "Sillas tapizadas y bases acolchadas de tu comedor.",
     features: ["Precio por unidad", "Limpieza profunda", "Sin daño a la tela"],
     popular: false,
