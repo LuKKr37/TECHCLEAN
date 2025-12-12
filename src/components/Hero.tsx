@@ -34,9 +34,9 @@ const Hero = () => {
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-secondary-foreground/80 mb-8 leading-relaxed">
+            <strong className="text-secondary-foreground">Lavado profundo con SECADO RÁPIDO (Turbinas) en Popayán.</strong>{" "}
             Eliminamos manchas, olores y ácaros de tu sofá, colchón y tapicería.{" "}
-            <strong className="text-secondary-foreground">Usa tus muebles el mismo día</strong> con nuestro 
-            sistema de secado acelerado en 6-8 horas.
+            <span className="text-accent font-semibold">Listos para usar en 6-8 horas.</span>
           </p>
 
           {/* Trust Indicators */}
