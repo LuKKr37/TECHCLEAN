@@ -1,72 +1,84 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Sofa, BedDouble, Armchair, LayoutGrid, MessageCircle, Check, X, Star, Zap } from "lucide-react";
-
-const services = [
-  {
-    icon: Sofa,
-    title: "Limpieza de Salas",
-    description: "Sala en L, sofás de 2 y 3 puestos. Eliminamos manchas profundas y olores.",
-    features: ["Desmanchado profesional", "Desinfección antibacterial", "Secado acelerado"],
-    popular: true,
-  },
-  {
-    icon: BedDouble,
-    title: "Limpieza de Colchones",
-    description: "Sencillo, doble, queen y king. Eliminamos ácaros, manchas y olores.",
-    features: ["Tratamiento anti-ácaros", "Eliminación de olores", "Ideal para alergias"],
-    popular: false,
-  },
-  {
-    icon: Armchair,
-    title: "Limpieza de Sillas de Comedor",
-    description: "Sillas tapizadas y bases acolchadas de tu comedor.",
-    features: ["Precio por unidad", "Limpieza profunda", "Sin daño a la tela"],
-    popular: false,
-  },
-  {
-    icon: LayoutGrid,
-    title: "Limpieza de Alfombras",
-    description: "Alfombras pequeñas, medianas y grandes. Restauramos sus colores originales.",
-    features: ["Precio por m²", "Remoción de manchas", "Restauración de color"],
-    popular: false,
-  },
-];
-
+const services = [{
+  icon: Sofa,
+  title: "Limpieza de Salas",
+  description: "Sala en L, sofás de 2 y 3 puestos. Eliminamos manchas profundas y olores.",
+  features: ["Desmanchado profesional", "Desinfección antibacterial", "Secado acelerado"],
+  popular: true
+}, {
+  icon: BedDouble,
+  title: "Limpieza de Colchones",
+  description: "Sencillo, doble, queen y king. Eliminamos ácaros, manchas y olores.",
+  features: ["Tratamiento anti-ácaros", "Eliminación de olores", "Ideal para alergias"],
+  popular: false
+}, {
+  icon: Armchair,
+  title: "Limpieza de Sillas de Comedor",
+  description: "Sillas tapizadas y bases acolchadas de tu comedor.",
+  features: ["Precio por unidad", "Limpieza profunda", "Sin daño a la tela"],
+  popular: false
+}, {
+  icon: LayoutGrid,
+  title: "Limpieza de Alfombras",
+  description: "Alfombras pequeñas, medianas y grandes. Restauramos sus colores originales.",
+  features: ["Precio por m²", "Remoción de manchas", "Restauración de color"],
+  popular: false
+}];
 const planComparison = {
   basico: {
     name: "Lavado Básico",
     description: "Limpieza profesional estándar",
-    features: [
-      { name: "Limpieza profunda", included: true },
-      { name: "Desmanchado básico", included: true },
-      { name: "Desinfección antibacterial", included: true },
-      { name: "Secado acelerado con turbinas", included: false },
-      { name: "Garantía de olores", included: false },
-      { name: "Entrega lista para usar", included: false },
-    ],
-    note: "Entrega semi-húmeda (24-48h de secado natural)",
+    features: [{
+      name: "Limpieza profunda",
+      included: true
+    }, {
+      name: "Desmanchado básico",
+      included: true
+    }, {
+      name: "Desinfección antibacterial",
+      included: true
+    }, {
+      name: "Secado acelerado con turbinas",
+      included: false
+    }, {
+      name: "Garantía de olores",
+      included: false
+    }, {
+      name: "Entrega lista para usar",
+      included: false
+    }],
+    note: "Entrega semi-húmeda (24-48h de secado natural)"
   },
   full: {
     name: "Combo Full",
     description: "Experiencia premium con secado garantizado",
-    features: [
-      { name: "Limpieza profunda", included: true },
-      { name: "Desmanchado profesional", included: true },
-      { name: "Desinfección antibacterial", included: true },
-      { name: "Secado acelerado con turbinas", included: true },
-      { name: "Garantía de olores", included: true },
-      { name: "Entrega lista para usar", included: true },
-    ],
-    note: "Usa tus muebles el mismo día (6-8 horas)",
-  },
+    features: [{
+      name: "Limpieza profunda",
+      included: true
+    }, {
+      name: "Desmanchado profesional",
+      included: true
+    }, {
+      name: "Desinfección antibacterial",
+      included: true
+    }, {
+      name: "Secado acelerado con turbinas",
+      included: true
+    }, {
+      name: "Garantía de olores",
+      included: true
+    }, {
+      name: "Entrega lista para usar",
+      included: true
+    }],
+    note: "Usa tus muebles el mismo día (6-8 horas)"
+  }
 };
-
 const Services = () => {
   const whatsappLink = "https://wa.me/573001234567?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20limpieza";
-
-  return (
-    <section id="servicios" className="py-20 bg-background">
+  return <section id="servicios" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -83,20 +95,10 @@ const Services = () => {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {services.map((service, index) => (
-            <Card
-              key={index}
-              className={`relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
-                service.popular
-                  ? "border-primary shadow-lg"
-                  : "border-border"
-              }`}
-            >
-              {service.popular && (
-                <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-bl-lg">
+          {services.map((service, index) => <Card key={index} className={`relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${service.popular ? "border-primary shadow-lg" : "border-border"}`}>
+              {service.popular && <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-bl-lg">
                   Más Popular
-                </div>
-              )}
+                </div>}
               <CardContent className="p-6">
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
                   <service.icon className="w-7 h-7 text-primary" />
@@ -108,16 +110,13 @@ const Services = () => {
                   {service.description}
                 </p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-sm text-card-foreground">
+                  {service.features.map((feature, idx) => <li key={idx} className="flex items-center gap-2 text-sm text-card-foreground">
                       <Check className="w-4 h-4 text-primary flex-shrink-0" />
                       {feature}
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Plan Comparison */}
@@ -126,9 +125,7 @@ const Services = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
               ¿Cuál plan es mejor para ti?
             </h3>
-            <p className="text-muted-foreground">
-              Sofía, elige el plan que se adapte a tu hogar y estilo de vida
-            </p>
+            <p className="text-muted-foreground">Elige el plan que se adapte a tu hogar y estilo de vida</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -144,18 +141,12 @@ const Services = () => {
               </CardHeader>
               <CardContent className="pt-0">
                 <ul className="space-y-3 mb-6">
-                  {planComparison.basico.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-3">
-                      {feature.included ? (
-                        <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                      ) : (
-                        <X className="w-5 h-5 text-muted-foreground/50 flex-shrink-0" />
-                      )}
+                  {planComparison.basico.features.map((feature, idx) => <li key={idx} className="flex items-center gap-3">
+                      {feature.included ? <Check className="w-5 h-5 text-primary flex-shrink-0" /> : <X className="w-5 h-5 text-muted-foreground/50 flex-shrink-0" />}
                       <span className={feature.included ? "text-card-foreground" : "text-muted-foreground/60"}>
                         {feature.name}
                       </span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
                 <div className="bg-muted/30 rounded-lg p-3 text-center">
                   <p className="text-sm text-muted-foreground">
@@ -183,14 +174,12 @@ const Services = () => {
               </CardHeader>
               <CardContent className="pt-0">
                 <ul className="space-y-3 mb-6">
-                  {planComparison.full.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-3">
+                  {planComparison.full.features.map((feature, idx) => <li key={idx} className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-accent flex-shrink-0" />
                       <span className="text-card-foreground font-medium">
                         {feature.name}
                       </span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
                 <div className="bg-accent/10 border border-accent/20 rounded-lg p-3 text-center">
                   <p className="text-sm text-foreground font-semibold">
@@ -215,8 +204,6 @@ const Services = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Services;
