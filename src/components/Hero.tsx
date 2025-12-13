@@ -3,16 +3,18 @@ import { MessageCircle, Clock, ShieldCheck, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-cleaning.jpg";
 
 const Hero = () => {
-  const whatsappLink = "https://wa.me/573001234567?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20limpieza";
+  const whatsappLink = "https://wa.me/573172441057?text=Hola%20TechClean,%20quiero%20cotizar...";
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20">
+    <header className="relative min-h-screen flex items-center pt-20">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Servicio profesional de limpieza de muebles a domicilio"
+          alt="Servicio profesional de limpieza de muebles a domicilio en Popayán"
           className="w-full h-full object-cover"
+          width={1920}
+          height={1080}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-secondary/40" />
       </div>
@@ -56,7 +58,8 @@ const Hero = () => {
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
               <Button 
                 size="lg" 
-                className="w-full sm:w-auto gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
+                className="w-full sm:w-auto gap-2 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
+                aria-label="Cotizar servicio de limpieza por WhatsApp"
               >
                 <MessageCircle className="w-5 h-5" />
                 Cotizar por WhatsApp
@@ -67,6 +70,7 @@ const Hero = () => {
               size="lg" 
               className="w-full sm:w-auto border-primary-foreground/50 bg-secondary-foreground/10 text-primary-foreground hover:bg-secondary-foreground/20 font-semibold text-lg px-8 py-6"
               onClick={() => document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })}
+              aria-label="Ver servicios de limpieza"
             >
               Ver Servicios
             </Button>
@@ -80,7 +84,7 @@ const Hero = () => {
           <div className="w-1.5 h-3 bg-primary rounded-full animate-pulse" />
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 

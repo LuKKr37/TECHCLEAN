@@ -3,7 +3,7 @@ import logo from "@/assets/logo-techclean.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const whatsappLink = "https://wa.me/573001234567?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20limpieza";
+  const whatsappLink = "https://wa.me/573172441057?text=Hola%20TechClean,%20quiero%20cotizar...";
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <img src={logo} alt="TechClean" className="h-10 mb-4 brightness-0 invert" />
+            <img src={logo} alt="TechClean - Limpieza de muebles Popayán" className="h-10 mb-4 brightness-0 invert" width={160} height={40} loading="lazy" />
             <p className="text-secondary-foreground/70 mb-4 max-w-md">
               Servicio profesional de limpieza y desinfección de muebles a domicilio en Popayán.
               Más de 5 años de experiencia cuidando los hogares de las familias del Cauca.
@@ -90,7 +90,8 @@ const Footer = () => {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-4 py-2 rounded-lg transition-colors"
+              className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-4 py-2 rounded-lg transition-colors"
+              aria-label="Contactar por WhatsApp"
             >
               <MessageCircle className="w-4 h-4" />
               WhatsApp

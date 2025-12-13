@@ -20,7 +20,7 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const whatsappLink = "https://wa.me/573001234567?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20limpieza";
+  const whatsappLink = "https://wa.me/573172441057?text=Hola%20TechClean,%20quiero%20cotizar...";
 
   return (
     <header
@@ -34,7 +34,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <img src={logo} alt="TechClean - Limpieza de muebles Popayán" className="h-10 md:h-12" />
+            <img src={logo} alt="TechClean - Limpieza de muebles Popayán" className="h-10 md:h-12" width={160} height={48} loading="lazy" />
           </a>
 
           {/* Desktop Navigation */}
@@ -74,7 +74,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-              <Button className="gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
+              <Button className="gap-2 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold" aria-label="Cotizar servicio de limpieza por WhatsApp">
                 <MessageCircle className="w-4 h-4" />
                 Cotizar Ahora
               </Button>
@@ -85,7 +85,7 @@ const Header = () => {
           <button
             className="lg:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label="Abrir menú de navegación"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6 text-foreground" />
@@ -131,7 +131,7 @@ const Header = () => {
               </button>
               <div className="px-4 pt-2">
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
+                  <Button className="w-full gap-2 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold" aria-label="Cotizar servicio de limpieza por WhatsApp">
                     <MessageCircle className="w-4 h-4" />
                     Cotizar Ahora
                   </Button>

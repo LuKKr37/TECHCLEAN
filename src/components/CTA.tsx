@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, Clock, MapPin, Phone } from "lucide-react";
 
 const CTA = () => {
-  const whatsappLink = "https://wa.me/573001234567?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20limpieza";
+  const whatsappLink = "https://wa.me/573172441057?text=Hola%20TechClean,%20quiero%20cotizar...";
 
   return (
     <section className="py-20 bg-primary relative overflow-hidden">
@@ -36,7 +36,8 @@ const CTA = () => {
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
-              className="gap-3 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+              className="gap-3 bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+              aria-label="Cotizar servicio de limpieza por WhatsApp"
             >
               <MessageCircle className="w-6 h-6" />
               Cotizar Ahora por WhatsApp
