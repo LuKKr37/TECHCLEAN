@@ -19,7 +19,7 @@ const Index = () => {
     "description": "Servicio profesional de limpieza y desinfección de muebles a domicilio en Popayán. Lavado de sofás, colchones, comedores y alfombras con secado acelerado garantizado.",
     "@id": "https://techclean.com.co",
     "url": "https://techclean.com.co",
-    "telephone": "+573001234567",
+    "telephone": "+573172441057",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Popayán",

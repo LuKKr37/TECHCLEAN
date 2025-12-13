@@ -77,7 +77,7 @@ const planComparison = {
   }
 };
 const Services = () => {
-  const whatsappLink = "https://wa.me/573001234567?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20limpieza";
+  const whatsappLink = "https://wa.me/573172441057?text=Hola%20TechClean,%20quiero%20cotizar...";
   return <section id="servicios" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
@@ -194,7 +194,7 @@ const Services = () => {
         {/* CTA */}
         <div className="text-center">
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="gap-2 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all">
+            <Button size="lg" className="gap-2 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all" aria-label="Cotizar Combo Full por WhatsApp">
               <MessageCircle className="w-5 h-5" />
               Cotizar Combo Full Ahora
             </Button>
