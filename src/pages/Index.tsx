@@ -47,7 +47,38 @@ const Index = () => {
       "@type": "City",
       "name": "Popayán"
     },
-    "serviceType": ["Limpieza de muebles", "Lavado de sofás", "Limpieza de colchones", "Lavado de alfombras"]
+    "serviceType": ["Limpieza de muebles", "Lavado de sofás", "Limpieza de colchones", "Lavado de alfombras"],
+    "sameAs": [
+      "https://www.facebook.com/TECHCLEAN8",
+      "https://www.instagram.com/techclean_lavadodemuebles/"
+    ]
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Upholstery Cleaning",
+    "name": "Limpieza de Tapicería a Domicilio",
+    "description": "Servicio profesional de limpieza de tapicería con tecnología de inyección-succión y secado acelerado con turbinas. Incluye desinfección y tratamiento anti-olores.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "TechClean Popayán",
+      "@id": "https://techclean.com.co"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Popayán"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de Limpieza de Tapicería",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de Sofás" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de Colchones" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de Sillas de Comedor" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de Alfombras" }}
+      ]
+    }
   };
 
   return (
@@ -70,6 +101,9 @@ const Index = () => {
         <meta name="twitter:description" content="Servicio profesional de limpieza de sofás, colchones y alfombras. Secado garantizado en 6-8 horas." />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
         </script>
       </Helmet>
 

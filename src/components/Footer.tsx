@@ -1,4 +1,4 @@
-import { MessageCircle, MapPin, Clock, Heart } from "lucide-react";
+import { MessageCircle, MapPin, Clock, Heart, Facebook, Instagram } from "lucide-react";
 import logo from "@/assets/logo-techclean.png";
 
 const Footer = () => {
@@ -21,7 +21,7 @@ const Footer = () => {
               Servicio profesional de limpieza y desinfección de muebles a domicilio en Popayán.
               Más de 5 años de experiencia cuidando los hogares de las familias del Cauca.
             </p>
-            <div className="flex flex-col gap-2 text-secondary-foreground/70">
+            <div className="flex flex-col gap-2 text-secondary-foreground/70 mb-4">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-primary" />
                 <span>Popayán, Cauca - Colombia</span>
@@ -30,6 +30,27 @@ const Footer = () => {
                 <Clock className="w-4 h-4 text-primary" />
                 <span>Lunes a Sábado: 8:00 AM - 6:00 PM</span>
               </div>
+            </div>
+            {/* Social Media */}
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.facebook.com/TECHCLEAN8"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Síguenos en Facebook"
+                className="text-secondary-foreground/70 hover:text-[#1877F2] transition-colors"
+              >
+                <Facebook className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.instagram.com/techclean_lavadodemuebles/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Síguenos en Instagram"
+                className="text-secondary-foreground/70 hover:text-[#E4405F] transition-colors"
+              >
+                <Instagram className="w-6 h-6" />
+              </a>
             </div>
           </div>
 
