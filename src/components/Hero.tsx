@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Clock, ShieldCheck, Sparkles } from "lucide-react";
-import heroImage from "@/assets/hero-cleaning.jpg";
+import heroImage from "@/assets/hero-cleaning-blanca.webp";
 
 const Hero = () => {
   const whatsappLink = "https://wa.me/573172441057?text=Hola%20TechClean,%20quiero%20cotizar...";
