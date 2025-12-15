@@ -1,16 +1,14 @@
 import { MessageCircle, MapPin, Clock, Heart, Facebook, Instagram } from "lucide-react";
 import logo from "@/assets/logo-techclean.png";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const whatsappLink = "https://wa.me/573172441057?text=Hola%20TechClean,%20quiero%20cotizar...";
-
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
-  return (
-    <footer className="bg-secondary text-secondary-foreground">
+  return <footer className="bg-secondary text-secondary-foreground">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -32,23 +30,11 @@ const Footer = () => {
               </div>
             </div>
             {/* Social Media */}
-            <div className="flex items-center gap-4">
-              <a
-                href="https://www.facebook.com/TECHCLEAN8"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Síguenos en Facebook"
-                className="text-secondary-foreground/70 hover:text-[#1877F2] transition-colors"
-              >
+            <div className="rounded shadow border-solid gap-[21px] flex items-center justify-center">
+              <a href="https://www.facebook.com/TECHCLEAN8" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook" className="text-secondary-foreground/70 hover:text-[#1877F2] transition-colors">
                 <Facebook className="w-6 h-6" />
               </a>
-              <a
-                href="https://www.instagram.com/techclean_lavadodemuebles/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Síguenos en Instagram"
-                className="text-secondary-foreground/70 hover:text-[#E4405F] transition-colors"
-              >
+              <a href="https://www.instagram.com/techclean_lavadodemuebles/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram" className="text-secondary-foreground/70 hover:text-[#E4405F] transition-colors">
                 <Instagram className="w-6 h-6" />
               </a>
             </div>
@@ -59,42 +45,27 @@ const Footer = () => {
             <h4 className="font-semibold text-secondary-foreground mb-4">Enlaces Rápidos</h4>
             <ul className="space-y-2">
               <li>
-                <button
-                  onClick={() => scrollToSection("servicios")}
-                  className="text-secondary-foreground/70 hover:text-primary transition-colors"
-                >
+                <button onClick={() => scrollToSection("servicios")} className="text-secondary-foreground/70 hover:text-primary transition-colors">
                   Servicios
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection("beneficios")}
-                  className="text-secondary-foreground/70 hover:text-primary transition-colors"
-                >
+                <button onClick={() => scrollToSection("beneficios")} className="text-secondary-foreground/70 hover:text-primary transition-colors">
                   ¿Por qué elegirnos?
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection("proceso")}
-                  className="text-secondary-foreground/70 hover:text-primary transition-colors"
-                >
+                <button onClick={() => scrollToSection("proceso")} className="text-secondary-foreground/70 hover:text-primary transition-colors">
                   Cómo funciona
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection("testimonios")}
-                  className="text-secondary-foreground/70 hover:text-primary transition-colors"
-                >
+                <button onClick={() => scrollToSection("testimonios")} className="text-secondary-foreground/70 hover:text-primary transition-colors">
                   Testimonios
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection("faq")}
-                  className="text-secondary-foreground/70 hover:text-primary transition-colors"
-                >
+                <button onClick={() => scrollToSection("faq")} className="text-secondary-foreground/70 hover:text-primary transition-colors">
                   Preguntas Frecuentes
                 </button>
               </li>
@@ -107,13 +78,7 @@ const Footer = () => {
             <p className="text-secondary-foreground/70 mb-4">
               ¿Tienes preguntas? Escríbenos por WhatsApp y te respondemos en minutos.
             </p>
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-4 py-2 rounded-lg transition-colors"
-              aria-label="Contactar por WhatsApp"
-            >
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-4 py-2 rounded-lg transition-colors" aria-label="Contactar por WhatsApp">
               <MessageCircle className="w-4 h-4" />
               WhatsApp
             </a>
@@ -134,8 +99,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
