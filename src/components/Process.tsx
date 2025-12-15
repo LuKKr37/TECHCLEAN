@@ -11,7 +11,7 @@ const steps = [
     icon: Camera,
     step: "02",
     title: "Envía Fotos",
-    description: "Mándanos fotos de tus muebles y las medidas aproximadas.",
+    description: "Mándanos fotos de tus muebles.",
   },
   {
     icon: Calendar,
