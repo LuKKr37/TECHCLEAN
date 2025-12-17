@@ -34,7 +34,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <img src={logo} alt="TechClean - Limpieza de muebles Popayán" className="h-10 md:h-12" width={160} height={48} loading="lazy" />
+            <img src={logo} alt="TechClean - Limpieza de muebles Popayán" className="h-12 md:h-14 w-auto rounded-md" loading="lazy" />
           </a>
 
           {/* Desktop Navigation */}
