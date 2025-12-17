@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <img src={logo} alt="TechClean - Limpieza de muebles Popayán" className="h-36 md:h-40 w-auto mx-auto md:mx-0 mb-6 rounded-lg" loading="lazy" />
+            <img src={logo} alt="TechClean - Limpieza de muebles Popayán" className="h-36 md:h-40 w-auto mx-auto md:mx-0 mb-6 rounded-lg shadow-lg" loading="lazy" />
             <p className="text-secondary-foreground/70 mb-4 max-w-md">Servicio profesional de limpieza y desinfección de muebles a domicilio en Popayán. Más de 7 años de experiencia cuidando los hogares de las familias del Cauca.</p>
             <div className="flex flex-col gap-2 text-secondary-foreground/70 mb-4">
               <div className="flex items-center gap-2">
