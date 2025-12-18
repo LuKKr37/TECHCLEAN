@@ -29,7 +29,7 @@ const Equipment = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
             Equipos Profesionales <span className="text-primary">Exclusivos</span>
           </h2>
-          <p className="text-secondary-foreground/70 max-w-2xl mx-auto text-lg">
+          <p className="text-secondary/70 max-w-2xl mx-auto text-lg">
             Somos los únicos en Popayán con tecnología de secado acelerado. 
             Por eso podemos garantizar que tus muebles estarán listos el mismo día, sin olor a humedad.
           </p>
@@ -64,7 +64,7 @@ const Equipment = () => {
                 <h3 className="text-xl font-bold text-secondary mb-3">
                   {equipo.titulo}
                 </h3>
-                <p className="text-secondary-foreground/70 leading-relaxed">
+                <p className="text-secondary/70 leading-relaxed">
                   {equipo.descripcion}
                 </p>
               </div>
