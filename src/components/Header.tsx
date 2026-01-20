@@ -1,17 +1,24 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, MessageCircle } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo-header.webp";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const ticking = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (!ticking.current) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 20);
+          ticking.current = false;
+        });
+        ticking.current = true;
+      }
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -30,9 +37,9 @@ const Header = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* Logo - No lazy loading since it's above the fold */}
           <a href="#" className="flex items-center">
-            <img src={logo} alt="TechClean - Limpieza de muebles Popayán" className="h-12 md:h-14 w-auto rounded-md" loading="lazy" />
+            <img src={logo} alt="TechClean - Limpieza de muebles Popayán" className="h-12 md:h-14 w-auto rounded-md" width={180} height={56} />
           </a>
 
           {/* Desktop Navigation */}
