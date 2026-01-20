@@ -6,7 +6,7 @@ const Hero = () => {
   return <header className="relative min-h-screen flex items-center pt-20">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Servicio profesional de limpieza de muebles a domicilio en Popayán" className="w-full h-full object-cover" width={1920} height={1080} />
+        <img src={heroImage} alt="Servicio profesional de limpieza de muebles a domicilio en Popayán" className="w-full h-full object-cover" width={1920} height={1080} fetchPriority="high" decoding="async" />
         <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-secondary/40" />
       </div>
 
