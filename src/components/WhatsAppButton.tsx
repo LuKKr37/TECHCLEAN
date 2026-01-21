@@ -1,9 +1,9 @@
-const WhatsAppButton = () => {
-  const whatsappLink = "https://wa.me/573172441057?text=Hola%20TechClean,%20quiero%20cotizar...";
+import { WHATSAPP_LINK } from "@/lib/constants";
 
+const WhatsAppButton = () => {
   return (
     <a
-      href={whatsappLink}
+      href={WHATSAPP_LINK}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-transform duration-200 hover:scale-110 group will-change-transform"

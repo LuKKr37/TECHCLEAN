@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Clock, MapPin, Phone } from "lucide-react";
+import { WHATSAPP_LINK } from "@/lib/constants";
 
 const CTA = () => {
-  const whatsappLink = "https://wa.me/573172441057?text=Hola%20TechClean,%20quiero%20cotizar...";
-
   return (
     <section className="py-20 bg-primary relative overflow-hidden">
       {/* Background Pattern */}
@@ -18,31 +17,36 @@ const CTA = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-primary-foreground/20 text-primary-foreground px-4 py-2 rounded-full mb-6">
             <Clock className="w-4 h-4" />
-            <span className="text-sm font-medium">Respuesta en menos de 30 minutos</span>
+            <span className="text-sm font-medium">Respuesta rápida por WhatsApp</span>
           </div>
 
           {/* Headline */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">
-            ¿Listo para Renovar tus Muebles?
+            ¿Listo para renovar tus muebles?
           </h2>
 
           {/* Subheadline */}
           <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Envíanos fotos por WhatsApp y recibe tu cotización personalizada en minutos.
+            Envíanos fotos (o medidas si es colchón/alfombra) y te cotizamos en minutos.
             Sin compromisos.
           </p>
 
           {/* CTA Button */}
-          <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
               className="gap-3 bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all hover:scale-105"
               aria-label="Cotizar servicio de limpieza por WhatsApp"
             >
               <MessageCircle className="w-6 h-6" />
-              Cotizar Ahora por WhatsApp
+              Cotizar ahora por WhatsApp
             </Button>
           </a>
+
+          {/* Microcopy */}
+          <p className="text-primary-foreground/70 text-sm mt-4 italic">
+            Si tienes alergias o rinitis, pregunta por Colchón Full + Raycop.
+          </p>
 
           {/* Contact Info */}
           <div className="flex flex-wrap justify-center gap-6 mt-10 text-primary-foreground/80">
