@@ -3,33 +3,33 @@ import { Wind, Heart, UserCheck, PawPrint, Wrench, Shield } from "lucide-react";
 const benefits = [
   {
     icon: Wind,
-    title: "Secado Acelerado",
-    description: "Turbinas industriales que secan tus muebles en 6-8 horas. Sin humedad residual.",
+    title: "Secado acelerado (6–8h)",
+    description: "Turbinas industriales para que tus muebles queden listos el mismo día (Combo Full).",
   },
   {
     icon: Heart,
-    title: "Honestidad Total",
-    description: "Precios justos y transparentes. Sin sorpresas ni cobros ocultos.",
+    title: "Honestidad total",
+    description: "Te decimos desde el inicio qué manchas pueden salir y cuáles pueden quedar.",
   },
   {
     icon: UserCheck,
-    title: "Personal de Confianza",
-    description: "La misma operaria experta siempre. Sin rotación de desconocidos en tu hogar.",
+    title: "Personal de confianza",
+    description: "Operaria fija y experta (sin rotación de desconocidos).",
   },
   {
     icon: PawPrint,
-    title: "Pet Friendly",
-    description: "Tratamiento especializado anti-orina. Productos seguros para tus mascotas.",
+    title: "Pet friendly",
+    description: "Tratamiento especial para orina y olores (con recargo según caso).",
   },
   {
     icon: Wrench,
-    title: "Equipos Profesionales",
-    description: "Máquinas de inyección-succión de última generación para limpieza profunda.",
+    title: "Equipos profesionales",
+    description: "Inyección–succión para lavado profundo sin dejar residuos.",
   },
   {
     icon: Shield,
-    title: "Desinfección Profunda",
-    description: "Eliminamos ácaros, bacterias y alérgenos. Garantía de olores incluida.",
+    title: "Desinfección profunda",
+    description: "Desinfección antibacterial en el lavado y opción Raycop para colchones (plan premium).",
   },
 ];
 
@@ -40,13 +40,13 @@ const Benefits = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-            ¿Por Qué Elegirnos?
+            ¿Por Qué TechClean?
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-card-foreground mt-3 mb-4">
-            Los Pilares de TechClean
+            Porque en tu casa importan 3 cosas
           </h2>
           <p className="text-muted-foreground text-lg">
-            Entendemos lo que realmente importa: muebles secos, hogar libre de olores y personas de confianza en tu casa.
+            Que se seque rápido, que sea seguro y que te digan la verdad.
           </p>
         </div>
 

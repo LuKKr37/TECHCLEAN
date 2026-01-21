@@ -4,32 +4,32 @@ const steps = [
   {
     icon: MessageCircle,
     step: "01",
-    title: "Contáctanos",
-    description: "Escríbenos por WhatsApp. Cuéntanos qué muebles necesitas lavar.",
+    title: "Contáctanos por WhatsApp",
+    description: "Cuéntanos qué necesitas lavar.",
   },
   {
     icon: Camera,
     step: "02",
-    title: "Envía Fotos",
-    description: "Mándanos fotos de tus muebles.",
+    title: "Envía fotos (o medidas)",
+    description: "Para muebles: fotos claras. Para colchones y alfombras: medidas exactas.",
   },
   {
     icon: Calendar,
     step: "03",
-    title: "Recibe Cotización",
-    description: "Te enviamos precio exacto y opciones: Combo Full o Económico.",
+    title: "Recibe cotización y plan",
+    description: "Muebles: Económico o Full. Colchones: Económico, Full o Full + Raycop.",
   },
   {
     icon: Sparkles,
     step: "04",
-    title: "Agendamos Visita",
-    description: "Elegimos fecha y hora. Nuestra operaria llegará puntualmente.",
+    title: "Agendamos tu visita",
+    description: "Te confirmamos día y franja horaria. La operaria te escribe al acercarse.",
   },
   {
     icon: CheckCircle,
     step: "05",
-    title: "¡Listo!",
-    description: "Realizamos el servicio. Pagas al finalizar por Nequi o efectivo.",
+    title: "Servicio listo + pagas",
+    description: "Pago por Nequi o efectivo al terminar. Sin anticipos.",
   },
 ];
 
@@ -43,10 +43,10 @@ const Process = () => {
             Proceso Simple
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-3 mb-4">
-            ¿Cómo Funciona?
+            ¿Cómo funciona?
           </h2>
           <p className="text-muted-foreground text-lg">
-            En 5 pasos simples, tus muebles quedarán como nuevos. Sin complicaciones.
+            En 5 pasos simples. Sin vueltas. Sin formularios eternos.
           </p>
         </div>
 
