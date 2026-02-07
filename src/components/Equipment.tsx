@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import equipoLavado from "@/assets/equipo-lavado.webp";
 import turbinasSecado from "@/assets/turbina-secado.webp";
+import raycop from "@/assets/raycop.webp";
 
 const equipos = [
   {
@@ -19,7 +20,7 @@ const equipos = [
     badge: "Únicos en Popayán",
   },
   {
-    imagen: null, // Placeholder - se puede agregar imagen real después
+    imagen: raycop,
     titulo: "Raycop (UV+ para Colchones)",
     descripcion:
       "Refuerzo premium para colchones con tecnología UV+ + pulsación + filtración HEPA, diseñada para ayudar a reducir ácaros y alérgenos en superficies de descanso. Solo disponible en el plan Full + Raycop.",
